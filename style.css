@@ -1,0 +1,177 @@
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+
+body{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    color:#000;
+}
+
+.calculator{
+    width:90%;
+    max-width:400px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.calculator__display{
+    text-align:right;
+    background-color: #fff;
+    font-size:3rem;
+    padding:15px;
+    padding-top:5rem;
+    line-height: 55px;
+    border-bottom: 0.5px solid #999;
+}
+
+[data-type="operator"],
+[data-type="clear"],
+[data-type="clear-single"] {
+    color: orangered;
+}
+
+.calculator button{
+    border: none;
+    background-color: #fff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+button:active{
+    font-weight: bold;
+}
+
+.calculator__keys{
+    display: grid;
+    gap:0.5px;
+    background-color: #999;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "clear clear-single percent divide"
+    "seven eight nine times"
+    "four five six minus"
+    "one two three plus"
+    "sqrt zero decimal equal";
+    min-height: 300px;
+}
+
+.active{
+    background-color: #cdcdcd!important;
+    font-weight: bold;
+}
+
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+button:hover, button:active{
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+    border-color: #bbb;
+  }
+
+.clear{
+    grid-area: clear;
+}
+
+.clear-single{
+    grid-area: clear-single;
+}
+
+.percent{
+    grid-area: percent;
+}
+
+.divide{
+    grid-area: divide;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+.times{
+    grid-area: times;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.minus{
+    grid-area: minus;
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.plus{
+    grid-area:plus;
+}
+
+.sqrt{
+    grid-area: sqrt;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.decimal{
+    grid-area: decimal;
+}
+
+.equal{
+    grid-area: equal;
+    background-color:orangered !important;
+    color:#fff;
+}
+
+.equal:hover{
+    background-color: rgb(255, 92, 32) !important;
+}
+
+
+
+
+
+
+
